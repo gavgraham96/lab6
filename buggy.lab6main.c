@@ -15,6 +15,7 @@ if (argc <= 2){		/* must have at least one number	*/
 
 if((dynamic_array=malloc((argc-1)*sizeof(int))) == NULL){
 	printf("Could not allocate dynamic memory\n");
+	//must have a return 0
 	return;
 }
 
@@ -33,6 +34,7 @@ Sort(dynamic_array, argc-1);
 
 printf("The input received has a span of %d units.\n", min-max);
 
+	//To find average you must have sum/(argc-1)
 printf("The average value is %d\n", sum/argc-1);
 
 printf("The values in ascending order are:\n");
@@ -41,6 +43,6 @@ for(i=0; i<argc-1; i++){
 	printf("%d\n",*(dynamic_array+i));
 }
 //must have return 0
-return 0;
+return;
 }
 
