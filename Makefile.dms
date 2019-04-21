@@ -1,0 +1,16 @@
+all:mkprog
+
+mkprog:mkmain.o mkfact.o mkhello.o
+	gcc mkmain.o mkfact.o mkhello.o -o mkprog
+
+mkmain.o:mkmain.c mkfunc.h
+	gcc -ansi -pedantic -c mkmain.c
+
+mkfact.o:mkfact.c mkfunc.h
+	gcc -ansi -pedantic -c mkfact.c
+
+mkhello.o:mkhello.c mkfunc.h
+	gcc -ansi -pedantic -c mkhello.c
+
+clean:
+	rm -rf *.o mkprog
