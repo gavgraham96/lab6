@@ -2,7 +2,7 @@
  
 int main(int array[], int size)
 {
-  int minimum = array[0]
+  int minimum = array[0];
     for (c = 1; c < size; c++)
     {
         if (array[c] < minimum)
