@@ -1,1 +1,22 @@
+all:lab6
 
+lab6:lab6.o min.o max.o sum.o sort.o
+	gcc lab6.o min.o max.o sum.o sort.o -o lab6
+
+lab6.o:lab6.c min.c max.c sum.c sort.c stdlib.h stdio.h
+	gcc -ansi -pedantic -c lab6.c
+
+min.o:min.c stdio.h
+	gcc -ansi -pedantic -c min.c
+
+max.o:max.c stdio.h
+	gcc -ansi -pedantic -c max.c
+  
+sum.o:sum.c stdio.h
+	gcc -ansi -pedantic -c sum.c
+  
+sort.o:sort.c 
+	gcc -ansi -pedantic -c sort.c
+
+clean:
+	rm -rf *.o lab6
