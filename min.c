@@ -8,7 +8,6 @@ int main(int array[], int size)
         if (array[c] < minimum)
         {
            minimum = array[c];
-           location = c+1;
         }
     }
     printf("The minimum value is %d.\n", minimum);
